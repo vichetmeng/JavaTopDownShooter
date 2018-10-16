@@ -1,0 +1,3 @@
+#,name,description,weight,power,usable,image_path
+1,Health Potion,Restores HP,5,20,1,resources/images/item/health_potion.png
+2,Mana Potion,Restores MP,5,20,1,resources/images/item/mana_potion.png

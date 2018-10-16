@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.view.ArmorCodexListScene">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#playMenuClickSound" prefHeight="385.0" prefWidth="579.0">
+         <bottom>
+            <Pane prefHeight="73.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="backgroundMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="6.0" layoutY="28.0" onMouseClicked="#changeBackgroundSongStatus" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_music_sound_on.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="soundButton" fitHeight="36.0" fitWidth="47.0" layoutX="51.0" layoutY="28.0" onMouseClicked="#changeSoundStatus" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="36.0" fitWidth="47.0" layoutX="536.0" layoutY="23.0" onMouseClicked="#skipSong" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_skip_song.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="55.0" layoutX="448.0" layoutY="14.0" onMouseClicked="#restartSong" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_previous_song.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="currentlyPlayingLabel" layoutX="457.0" layoutY="4.0" text="Currently Playing:" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="songNameLabel" layoutX="529.0" layoutY="3.0" text="Greetings" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fx:id="pauseMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="500.0" layoutY="19.0" onMouseClicked="#pauseSong" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_pause.png" />
+                     </image>
+                  </ImageView>
+                  <Slider fx:id="volumeSlider" blockIncrement="0.1" focusTraversable="false" layoutX="448.0" layoutY="52.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" onMouseClicked="#adjustVolume" onMouseDragged="#adjustVolume" prefHeight="24.0" prefWidth="141.0" showTickMarks="true" value="0.5" />
+                  <ComboBox fx:id="armorRarityFilterComboBox" focusTraversable="false" layoutX="120.0" layoutY="28.0" onAction="#filter" onMouseClicked="#playMenuClickSound" prefHeight="25.0" prefWidth="153.0" promptText="All Armor Rarities" />
+                  <Label layoutX="150.0" layoutY="12.0" text="Select Armor Rarity">
+                     <font>
+                        <Font name="Calibri Italic" size="12.0" />
+                     </font></Label>
+                  <ImageView fitHeight="28.0" fitWidth="125.0" layoutX="324.0" layoutY="5.0" onMouseClicked="#loadMainMenu" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_button_main_menu.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="125.0" layoutX="340.0" layoutY="38.0" onMouseClicked="#loadCodexMenu" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_button_return.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <VBox prefHeight="326.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="codexListView" fixedCellSize="50.0" onMouseClicked="#displayEnemyDetails" prefHeight="311.0" prefWidth="570.0" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#playMenuTypeSound" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.view.InventoryScreen">
+   <children>
+      <ImageView fitHeight="128.0" fitWidth="142.0" layoutX="93.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/player/static.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot1" fitHeight="64.0" fitWidth="64.0" layoutX="308.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot4" fitHeight="64.0" fitWidth="64.0" layoutX="554.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot2" fitHeight="64.0" fitWidth="64.0" layoutX="388.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot3" fitHeight="64.0" fitWidth="64.0" layoutX="472.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot9" fitHeight="64.0" fitWidth="64.0" layoutX="308.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot12" fitHeight="64.0" fitWidth="64.0" layoutX="554.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot10" fitHeight="64.0" fitWidth="64.0" layoutX="388.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot11" fitHeight="64.0" fitWidth="64.0" layoutX="472.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot5" fitHeight="64.0" fitWidth="64.0" layoutX="308.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot8" fitHeight="64.0" fitWidth="64.0" layoutX="554.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot6" fitHeight="64.0" fitWidth="64.0" layoutX="388.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot7" fitHeight="64.0" fitWidth="64.0" layoutX="472.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="equipedWeapon" fitHeight="64.0" fitWidth="64.0" layoutX="220.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="equipedArmor" fitHeight="64.0" fitWidth="64.0" layoutX="20.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/border.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="230.0" layoutY="144.0" text="Weapon">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="34.0" layoutY="144.0" text="Armor">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ImageView fitHeight="87.0" fitWidth="230.0" layoutX="352.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/menu/menu_inventory.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="6.0" layoutY="401.0" prefHeight="73.0" prefWidth="629.0">
+         <children>
+            <ImageView fx:id="backgroundMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="6.0" layoutY="28.0" onMouseClicked="#changeBackgroundSongStatus" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_music_sound_on.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="soundButton" fitHeight="36.0" fitWidth="47.0" layoutX="51.0" layoutY="28.0" onMouseClicked="#changeSoundStatus" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="36.0" fitWidth="47.0" layoutX="558.0" layoutY="23.0" onMouseClicked="#skipSong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_skip_song.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="55.0" layoutX="457.0" layoutY="14.0" onMouseClicked="#restartSong" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_previous_song.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="currentlyPlayingLabel" layoutX="476.0" layoutY="4.0" text="Currently Playing:" wrapText="true">
+               <font>
+                  <Font name="Calibri" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="songNameLabel" layoutX="544.0" layoutY="3.0" text="Greetings" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="10.0" />
+               </font>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </Label>
+            <ImageView fx:id="pauseMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="513.0" layoutY="18.0" onMouseClicked="#pauseSong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_pause.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="volumeSlider" blockIncrement="0.1" focusTraversable="false" layoutX="460.0" layoutY="52.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" onMouseClicked="#adjustVolume" onMouseDragged="#adjustVolume" prefHeight="24.0" prefWidth="141.0" showTickMarks="true" value="0.5" />
+            <Label fx:id="errorResultLabel" contentDisplay="CENTER" focusTraversable="false" layoutX="176.0" layoutY="29.0" prefHeight="17.0" prefWidth="255.0" text="Field Required" textFill="RED" visible="false" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="backImage" fitHeight="33.0" fitWidth="101.0" layoutX="325.0" layoutY="21.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_button_back.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="66.0" layoutX="217.0" layoutY="21.0" onMouseClicked="#save" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_button_save.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

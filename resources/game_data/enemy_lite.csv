@@ -1,0 +1,5 @@
+#,Name,Description,Attack,Defense,Speed,Max HP,Movement Image Path,Wounded Movement Image Path,Death Image Path,Codex Image Path,Level
+1,Troll,Trolollol.,10,5,0.5,100,resources/images/enemy/troll_move.png,resources/images/enemy/troll_move_wounded.png,resources/images/enemy/troll_death.png,resources/images/codex/codex_troll.png,2
+2,Bugmen,Just eww.,15,7,0.7,125,resources/images/enemy/bug_move.png,resources/images/enemy/bug_move_wounded.png,resources/images/enemy/bug_death.png,resources/images/codex/codex_bug.png,3
+3,Demon,El Diablo.,20,10,0.5,200,resources/images/codex/codex_demon.png,resources/images/codex/codex_demon.png,resources/images/enemy/demon_death.png,resources/images/codex/codex_demon.png,4
+4,Bee,How can this be considered an enemy?,5,1,0.9,50,resources/images/codex/codex_bee.png,resources/images/codex/codex_bee.png,resources/images/enemy/bee_death.png,resources/images/codex/codex_bee.png,1

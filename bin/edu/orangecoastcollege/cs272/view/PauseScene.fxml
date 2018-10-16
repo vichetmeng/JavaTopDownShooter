@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.view.PauseScene">
+   <children>
+      <ImageView fitHeight="412.0" fitWidth="612.0" layoutX="-12.0" layoutY="-1.0" onMouseClicked="#playMenuClickSound" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/menu/menu_background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerPortait" fitHeight="252.0" fitWidth="336.0" layoutX="14.0" layoutY="74.0" onMouseClicked="#playMenuClickSound" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../resources/images/misc/wizard.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="142.0" layoutX="372.0" layoutY="74.0" onMouseClicked="#inventory" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/menu/menu_button_inventory.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="141.0" layoutX="372.0" layoutY="142.0" onMouseClicked="#save" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../resources/images/menu/menu_button_save.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="141.0" layoutX="372.0" layoutY="214.0" onMouseClicked="#setting" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../resources/images/menu/menu_button_settings.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="141.0" layoutX="372.0" layoutY="282.0" onMouseClicked="#back" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../resources/images/menu/menu_button_back.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

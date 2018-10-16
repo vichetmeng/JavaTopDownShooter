@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.view.ResourcesMenuScene">
+   <children>
+      <Pane layoutX="4.0" layoutY="314.0" onMouseClicked="#playMenuClickSound" prefHeight="79.0" prefWidth="592.0">
+         <children>
+            <ImageView fx:id="backgroundMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="6.0" layoutY="28.0" onMouseClicked="#changeBackgroundSongStatus" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_music_sound_on.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="soundButton" fitHeight="36.0" fitWidth="47.0" layoutX="51.0" layoutY="28.0" onMouseClicked="#changeSoundStatus" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="36.0" fitWidth="47.0" layoutX="536.0" layoutY="23.0" onMouseClicked="#skipSong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_skip_song.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="55.0" layoutX="448.0" layoutY="14.0" onMouseClicked="#restartSong" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_previous_song.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="currentlyPlayingLabel" layoutX="457.0" layoutY="4.0" text="Currently Playing:" wrapText="true">
+               <font>
+                  <Font name="Calibri" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="songNameLabel" layoutX="529.0" layoutY="3.0" text="Greetings" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="10.0" />
+               </font>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </Label>
+            <ImageView fx:id="pauseMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="500.0" layoutY="19.0" onMouseClicked="#pauseSong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_pause.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="volumeSlider" blockIncrement="0.1" focusTraversable="false" layoutX="448.0" layoutY="52.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" onMouseClicked="#adjustVolume" onMouseDragged="#adjustVolume" prefHeight="24.0" prefWidth="141.0" showTickMarks="true" value="0.5" />
+            <Label fx:id="errorResultLabel" contentDisplay="CENTER" focusTraversable="false" layoutX="176.0" layoutY="29.0" prefHeight="17.0" prefWidth="255.0" text="Field Required" textFill="RED" visible="false" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="154.0" layoutX="121.0" layoutY="16.0" onMouseClicked="#loadMainMenu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_button_main_menu.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="59.0" fitWidth="126.0" layoutX="296.0" layoutY="14.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_button_logout.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <SplitPane dividerPositions="0.3116883116883117, 0.6688311688311688" onMouseClicked="#playMenuClickSound" orientation="VERTICAL" prefHeight="310.0" prefWidth="600.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#loadCodex" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fitHeight="104.0" fitWidth="247.0" layoutX="176.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_codex.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="93.0" fitWidth="81.0" layoutX="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/chaser_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="99.0" fitWidth="87.0" layoutX="452.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/gunner_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#loadScoreBoard" prefHeight="97.0" prefWidth="598.0">
+               <children>
+                  <ImageView fitHeight="111.0" fitWidth="331.0" layoutX="134.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_scoreboard.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="93.0" fitWidth="79.0" layoutX="45.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/lancer_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="93.0" fitWidth="79.0" layoutX="482.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/lancer_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#loadCredits" prefHeight="84.0" prefWidth="598.0">
+               <children>
+                  <ImageView fitHeight="79.0" fitWidth="247.0" layoutX="176.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_credits.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="93.0" fitWidth="88.0" layoutX="453.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/soldier_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="104.0" fitWidth="79.0" layoutX="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/juggernaut_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

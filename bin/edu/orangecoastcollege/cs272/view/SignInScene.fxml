@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.view.SignInScene">
+   <children>
+      <BorderPane layoutX="2.0" layoutY="-1.0" onMouseClicked="#playMenuClickSound" prefHeight="399.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <Pane prefHeight="73.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="backgroundMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="6.0" layoutY="28.0" onMouseClicked="#changeBackgroundSongStatus" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_music_sound_on.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="soundButton" fitHeight="36.0" fitWidth="47.0" layoutX="51.0" layoutY="28.0" onMouseClicked="#changeSoundStatus" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="36.0" fitWidth="47.0" layoutX="536.0" layoutY="23.0" onMouseClicked="#skipSong" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_skip_song.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="55.0" layoutX="448.0" layoutY="14.0" onMouseClicked="#restartSong" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_previous_song.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="currentlyPlayingLabel" layoutX="457.0" layoutY="4.0" text="Currently Playing:" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="songNameLabel" layoutX="529.0" layoutY="3.0" text="Greetings" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fx:id="pauseMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="500.0" layoutY="19.0" onMouseClicked="#pauseSong" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_pause.png" />
+                     </image>
+                  </ImageView>
+                  <Slider fx:id="volumeSlider" blockIncrement="0.1" focusTraversable="false" layoutX="448.0" layoutY="52.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" onMouseClicked="#adjustVolume" onMouseDragged="#adjustVolume" prefHeight="24.0" prefWidth="141.0" showTickMarks="true" value="0.5" />
+                  <Label fx:id="errorResultLabel" contentDisplay="CENTER" focusTraversable="false" layoutX="176.0" layoutY="29.0" prefHeight="17.0" prefWidth="255.0" text="Field Required" textFill="RED" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </bottom>
+         <top>
+            <Pane prefHeight="175.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="125.0" fitWidth="200.0" layoutX="200.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_login_main.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <right>
+            <Pane prefHeight="181.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="usernameTF" alignment="CENTER" focusTraversable="false" layoutX="199.0" onKeyPressed="#playMenuTypeSound" onMouseClicked="#playMenuClickSound" prefHeight="25.0" prefWidth="202.0" promptText="Enter Your Username..." />
+                  <ImageView fitHeight="61.0" fitWidth="211.0" layoutX="203.0" layoutY="76.0" onMouseClicked="#signIn" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/menu/menu_sign_in.png" />
+                     </image>
+                  </ImageView>
+                  <Label focusTraversable="false" layoutX="225.0" layoutY="153.0" text="Need an Account? Click" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label focusTraversable="false" layoutX="339.0" layoutY="152.0" onMouseClicked="#loadSignUp" text="Here" textFill="RED">
+                     <font>
+                        <Font name="System Italic" size="11.0" />
+                     </font>
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="usernameErrorLabel" focusTraversable="false" layoutX="427.0" layoutY="6.0" text="Field Required" textFill="RED" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="passwordErrorLabel" focusTraversable="false" layoutX="427.0" layoutY="46.0" text="Field Required" textFill="RED" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label focusTraversable="false" layoutX="102.0" layoutY="6.0" text="Username" />
+                  <Label focusTraversable="false" layoutX="104.0" layoutY="45.0" text="Password" />
+                  <PasswordField fx:id="passwordPF" alignment="CENTER" focusTraversable="false" layoutX="199.0" layoutY="41.0" onKeyPressed="#playMenuTypeSound" onMouseClicked="#playMenuClickSound" prefHeight="25.0" prefWidth="202.0" promptText="Enter Your Password..." />
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

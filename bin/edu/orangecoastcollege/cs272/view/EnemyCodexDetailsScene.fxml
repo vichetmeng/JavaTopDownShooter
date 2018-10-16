@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#playMenuClickSound" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.view.EnemyCodexDetailsScene">
+   <children>
+      <Label fx:id="enemyNameLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="223.0" layoutY="14.0" prefHeight="28.0" prefWidth="209.0" text="Troll" textFill="#0d00ff" wrapText="true">
+         <font>
+            <Font name="Calibri Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="descriptionTextArea" editable="false" focusTraversable="false" layoutX="8.0" layoutY="142.0" prefHeight="163.0" prefWidth="441.0" text="Troll" />
+      <Label fx:id="levelLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="223.0" layoutY="52.0" prefHeight="28.0" prefWidth="209.0" text="Level: 0.0" textAlignment="RIGHT" wrapText="true">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <Pane layoutX="9.0" layoutY="313.0" prefHeight="82.0" prefWidth="588.0">
+         <children>
+            <ImageView fx:id="backgroundMusicButton" fitHeight="36.0" fitWidth="34.0" layoutX="6.0" layoutY="28.0" onMouseClicked="#changeBackgroundSongStatus" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_music_sound_on.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="soundButton" fitHeight="36.0" fitWidth="47.0" layoutX="51.0" layoutY="28.0" onMouseClicked="#changeSoundStatus" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="36.0" fitWidth="47.0" layoutX="536.0" layoutY="23.0" onMouseClicked="#skipSong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_skip_song.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="55.0" layoutX="448.0" layoutY="14.0" onMouseClicked="#restartSong" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_previous_song.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="currentlyPlayingLabel" layoutX="455.0" layoutY="4.0" text="Currently Playing:" wrapText="true">
+               <font>
+                  <Font name="Calibri" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="songNameLabel" layoutX="527.0" layoutY="3.0" text="Greetings" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="10.0" />
+               </font>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </Label>
+            <ImageView fx:id="pauseMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="500.0" layoutY="19.0" onMouseClicked="#pauseSong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_pause.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="volumeSlider" blockIncrement="0.1" focusTraversable="false" layoutX="448.0" layoutY="52.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" onMouseClicked="#adjustVolume" onMouseDragged="#adjustVolume" prefHeight="24.0" prefWidth="141.0" showTickMarks="true" value="0.5" />
+            <ImageView fitHeight="45.0" fitWidth="108.0" layoutX="308.0" layoutY="20.0" onMouseClicked="#returnToCodex" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_button_return.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="148.0" layoutX="135.0" layoutY="21.0" onMouseClicked="#returnToMainMenu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_button_main_menu.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <SplitPane dividerPositions="0.6418918918918919" layoutX="449.0" layoutY="5.0" orientation="VERTICAL" prefHeight="300.0" prefWidth="141.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="139.0">
+               <children>
+                  <ImageView fx:id="enemyImageImageView" fitHeight="163.0" fitWidth="141.0" layoutX="-1.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/codex/codex_troll.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="139.0">
+               <children>
+                  <Label fx:id="healthLabel" layoutX="7.0" layoutY="6.0" text="Health: 100" wrapText="true">
+                     <font>
+                        <Font name="Calibri Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="attackPointsLabel" layoutX="7.0" layoutY="41.0" text="Attack: 0.0" wrapText="true">
+                     <font>
+                        <Font name="Calibri Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="armorRatingLabel" layoutX="7.0" layoutY="75.0" text="Armor: 0.0" wrapText="true">
+                     <font>
+                        <Font name="Calibri Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ImageView fx:id="levelImageView" fitHeight="115.0" fitWidth="230.0" layoutX="219.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/codex/codex_one_star.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

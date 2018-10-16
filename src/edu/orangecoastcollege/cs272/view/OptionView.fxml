@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.view.OptionView">
+   <children>
+      <ImageView fitHeight="407.0" fitWidth="607.0" onMouseClicked="#playMenuClickSound" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/menu/menu_background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="170.0" layoutY="98.0" text="Background Music:" />
+      <Label layoutX="170.0" layoutY="128.0" text="Sound Effects:" />
+      <Slider fx:id="backgroundMusic" blockIncrement="0.1" layoutX="300.0" layoutY="100.0" majorTickUnit="0.5" max="1.0" />
+      <Slider fx:id="soundEffect" blockIncrement="0.1" layoutX="300.0" layoutY="130.0" majorTickUnit="0.5" max="1.0" />
+      <ImageView fx:id="muteImage" fitHeight="60.0" fitWidth="75.0" layoutX="271.0" layoutY="170.0" onMousePressed="#mute" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/menu/menu_sound_on.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="82.0" fitWidth="100.0" layoutX="370.0" layoutY="238.0" onMousePressed="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../resources/images/menu/menu_button_back.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

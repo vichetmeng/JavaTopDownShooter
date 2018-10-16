@@ -1,0 +1,4 @@
+#,Name,Description,Worth,Rarity,Rating,Image URI
+1,Stick,Doesn't look very magical.,1,1,2,resources/images/equip_weapons/stick.png
+2,Wand,Wingardium leviosa!,5,2,7,resources/images/equip_weapons/wand.png
+3,Master Wand,WARNING: Can cause fires… And explosions…,20,3,15,resources/images/equip_weapons/master_wand.png

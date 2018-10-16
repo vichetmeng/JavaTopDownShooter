@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.view.CreditsScene">
+   <children>
+      <Pane layoutX="5.0" layoutY="320.0" prefHeight="73.0" prefWidth="590.0">
+         <children>
+            <ImageView fx:id="backgroundMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="14.0" layoutY="18.0" onMouseClicked="#changeBackgroundSongStatus" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_music_sound_on.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="soundButton" fitHeight="36.0" fitWidth="47.0" layoutX="58.0" layoutY="20.0" onMouseClicked="#changeSoundStatus" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="36.0" fitWidth="47.0" layoutX="536.0" layoutY="23.0" onMouseClicked="#skipSong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_skip_song.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="55.0" layoutX="448.0" layoutY="14.0" onMouseClicked="#restartSong" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_previous_song.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="currentlyPlayingLabel" layoutX="457.0" layoutY="4.0" text="Currently Playing:" wrapText="true">
+               <font>
+                  <Font name="Calibri" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="songNameLabel" layoutX="529.0" layoutY="3.0" text="Greetings" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="10.0" />
+               </font>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </Label>
+            <ImageView fx:id="pauseMusicButton" fitHeight="36.0" fitWidth="47.0" layoutX="500.0" layoutY="19.0" onMouseClicked="#pauseSong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_pause.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="volumeSlider" blockIncrement="0.1" focusTraversable="false" layoutX="448.0" layoutY="52.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" onMouseClicked="#adjustVolume" onMouseDragged="#adjustVolume" prefHeight="24.0" prefWidth="141.0" showTickMarks="true" value="0.5" />
+            <Label fx:id="errorResultLabel" contentDisplay="CENTER" focusTraversable="false" layoutX="176.0" layoutY="29.0" prefHeight="17.0" prefWidth="255.0" text="Field Required" textFill="RED" visible="false" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="57.0" fitWidth="158.0" layoutX="125.0" layoutY="15.0" onMouseClicked="#loadMainMenu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_button_main_menu.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="118.0" layoutX="304.0" layoutY="14.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/menu/menu_button_back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TabPane onMouseClicked="#playMenuClickSound" prefHeight="314.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Adventure Game Team">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="285.0" prefWidth="593.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="7.0" layoutY="2.0" orientation="VERTICAL" prefHeight="281.0" prefWidth="160.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <ImageView fitHeight="130.0" fitWidth="148.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../../../../../resources/images/menu/menu_king.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutX="37.0" layoutY="27.0" text="Vincent Nguyen" />
+                                    <Label layoutX="49.0" layoutY="60.0" text="Vu Nguyen" />
+                                    <Label layoutX="45.0" layoutY="93.0" text="Vichet Meng" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <Label layoutX="265.0" layoutY="100.0" text="No Coyright Infringement Intended" wrapText="true" />
+                        <Label layoutX="197.0" layoutY="126.0" prefHeight="17.0" prefWidth="366.0" text="All music, images, and other resources used in this project belong to" />
+                        <Label layoutX="265.0" layoutY="152.0" text="their respective owners/creators." />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Music Credits">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.34782608695652173, 0.7023411371237458" layoutY="133.0" prefHeight="152.0" prefWidth="600.0">
+                          <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="234.0">
+                                 <children>
+                                    <ImageView fx:id="greetingsButton" fitHeight="45.0" fitWidth="55.0" layoutX="80.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../resources/images/menu/menu_play.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="64.0" layoutY="39.0" text="Song: Greetings">
+                                       <font>
+                                          <Font name="Calibri Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="58.0" layoutY="62.0" text="Artist: Yuki Hayashi" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="453.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="grimheartButton" fitHeight="45.0" fitWidth="55.0" layoutX="78.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../resources/images/menu/menu_play.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="46.0" layoutY="44.0" text="Song: Grimheart (BOFU)">
+                                       <font>
+                                          <Font name="Calibri Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="78.0" layoutY="67.0" text="Artist: Puru" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fx:id="heroicDesireButton" fitHeight="45.0" fitWidth="55.0" layoutX="65.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../resources/images/menu/menu_play.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="44.0" layoutY="39.0" text="Song: Heroic Desire">
+                                       <font>
+                                          <Font name="Calibri Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="60.0" layoutY="67.0" text="Artist: Keiji Inai" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <ImageView fitHeight="130.0" fitWidth="267.0" layoutX="184.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="99.0" fitWidth="298.0" layoutX="151.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../resources/images/menu/menu_music_credits.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

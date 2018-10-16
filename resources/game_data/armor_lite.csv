@@ -1,0 +1,7 @@
+#,Name,Description,Worth,Rarity,Rating,Image URI/Path
+1,Bronze Armor Set,Something's not quite right about that color…,8,2,5,resources/images/equip_armor/bronze.png
+2,Iron Armor Set,Used more for impressing  the ladies than actual protection.,12,3,7,resources/images/equip_armor/iron.png
+3,Steel Armor Set,Iron's scarier older brother.,15,4,10,resources/images/equip_armor/steel.png
+4,Plate Armor Set,Top quality stuff!,20,5,13,resources/images/equip_armor/plate.png
+5,Old Wizard Robes,Makes you look like you know what you're doing (when you clearly don't.),7,1,2,resources/images/equip_armor/old_wizard_robes.png
+6,Wizard Robes,Pointy blue hats and saggy robes are a must for all apsiring wizards!,25,5,15,resources/images/equip_armor/wizard_robes.png
